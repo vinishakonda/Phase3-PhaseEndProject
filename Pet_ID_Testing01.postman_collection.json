@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "48b62da6-48b4-401b-9d7c-1d3fc579ac90",
+		"name": "Pet_ID_Testing01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31715014"
+	},
+	"item": [
+		{
+			"name": "CreatePetID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 344,\r\n\"category\": {\r\n \"id\": 0,\r\n \"name\": \"string\"\r\n},\r\n\"name\": \"Doggie\",\r\n\"photoUrls\": [\r\n \"string\"\r\n],\r\n\"tags\": [\r\n {\r\n \"id\": 0,\r\n \"name\": \"string\"\r\n }\r\n],\r\n\"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Test_Uri}}/pet",
+					"host": [
+						"{{Test_Uri}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPetID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Test_Uri}}/pet/344",
+					"host": [
+						"{{Test_Uri}}"
+					],
+					"path": [
+						"pet",
+						"344"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DelPet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Test_Uri}}/pet/344",
+					"host": [
+						"{{Test_Uri}}"
+					],
+					"path": [
+						"pet",
+						"344"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
